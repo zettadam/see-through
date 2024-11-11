@@ -1,0 +1,7 @@
+@layer providers {
+  .st-catalog-listing {
+    background: rebeccapurple;
+    color: white;
+    padding: 0 1rem;
+  }
+}

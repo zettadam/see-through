@@ -1,0 +1,3 @@
+
+    export type RemoteKeys = 'seethrough_catalog/CatalogCarousel' | 'seethrough_catalog/CatalogDetails' | 'seethrough_catalog/CatalogListing';
+    type PackageType<T> = T extends 'seethrough_catalog/CatalogListing' ? typeof import('seethrough_catalog/CatalogListing') :T extends 'seethrough_catalog/CatalogDetails' ? typeof import('seethrough_catalog/CatalogDetails') :T extends 'seethrough_catalog/CatalogCarousel' ? typeof import('seethrough_catalog/CatalogCarousel') :any;

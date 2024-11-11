@@ -10,4 +10,6 @@ if (rootEl) {
       <App />
     </React.StrictMode>,
   );
+} else {
+  console.error('"root" element does not exist!');
 }

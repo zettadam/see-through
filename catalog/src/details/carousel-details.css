@@ -1,0 +1,6 @@
+@layer providers {
+  .st-catalog-details {
+    background: green;
+    color: white;
+  }
+}
