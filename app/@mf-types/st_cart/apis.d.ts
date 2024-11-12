@@ -1,0 +1,3 @@
+
+    export type RemoteKeys = 'st_cart/useCart' | 'st_cart/CartProvider' | 'st_cart/BasicCart' | 'st_cart/FullCart';
+    type PackageType<T> = T extends 'st_cart/FullCart' ? typeof import('st_cart/FullCart') :T extends 'st_cart/BasicCart' ? typeof import('st_cart/BasicCart') :T extends 'st_cart/CartProvider' ? typeof import('st_cart/CartProvider') :T extends 'st_cart/useCart' ? typeof import('st_cart/useCart') :any;

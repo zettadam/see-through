@@ -1,14 +1,20 @@
 export type Product = {
+  description: string;
   id: string;
+  largeImage: string;
+  mediumImage: string;
   name: string;
-  quantity: number;
   price: number;
+  smallImage: string;
   salesTaxRate: number;
 };
 
 export type Cart = {
+  changeQuantity: (id: string, quantity: number) => void;
   items: Product[];
-  placeInCart?: (product: Product, quantity: number) => void;
+  quantities: Record<string, number>;
+  placeInCart: (product: Product, quantity: number) => void;
+  removeFromCart: (id: string) => void;
   totalItems: number;
   totalPrice: number;
   totalSalesTax: number;

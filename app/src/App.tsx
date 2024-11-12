@@ -1,7 +1,7 @@
-import CartProvider from "seethrough_cart/CartProvider";
-import BasicCart from "seethrough_cart/BasicCart";
-import CatalogCarousel from "seethrough_catalog/CatalogCarousel";
-import CatalogListing from "seethrough_catalog/CatalogListing";
+import CartProvider from "st_cart/CartProvider";
+import BasicCart from "st_cart/BasicCart";
+import CatalogCarousel from "st_catalog/CatalogCarousel";
+import CatalogListing from "st_catalog/CatalogListing";
 
 import "./app.css";
 

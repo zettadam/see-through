@@ -8,49 +8,73 @@ export default function CartProvider({
 }: {
   children: React.ReactNode;
 }) {
-  const [cart, setCart] = React.useState<Product[]>([]);
+  const [items, setItems] = React.useState<Product[]>([]);
+  const [quantities, setQuantities] = React.useState<Record<string, number>>(
+    {},
+  );
 
   const placeInCart = (product: Product, quantity: number = 1) => {
     let nextItems: Product[];
     let item: Product | undefined;
 
-    const index: number = cart.findIndex((i) => i.id === product.id);
-    item = index >= 0 ? cart[index] : undefined;
+    const index: number = items.findIndex((i) => i.id === product.id);
+    item = index >= 0 ? items[index] : undefined;
 
     if (item) {
-      if (quantity > 0) {
-        nextItems = cart.map((i) =>
-          i.id === item.id ? { ...i, quantity: i.quantity + quantity } : i,
-        );
-      } else {
-        nextItems = [...cart];
-        nextItems.splice(index, 1);
-      }
-      setCart(nextItems);
+      setQuantities({
+        ...quantities,
+        [item.id]: quantities[item.id] + quantity,
+      });
     } else {
-      nextItems = [...cart];
-      nextItems.push({ ...product, quantity });
-      setCart(nextItems);
+      nextItems = [...items];
+      nextItems.push({ ...product });
+      setItems(nextItems);
+      setQuantities({ ...quantities, [product.id]: quantity });
     }
   };
 
-  const totalItems = cart.reduce((acc, item) => acc + item.quantity, 0);
+  const removeFromCart = (id: string) => {
+    const index: number = items.findIndex((i) => i.id === id);
+    const item = index >= 0 ? items[index] : undefined;
 
-  const totalPrice = cart.reduce(
-    (acc, item) => acc + item.price * item.quantity,
+    if (item) {
+      const nextItems = [...items];
+      nextItems.splice(index, 1);
+      setItems(nextItems);
+      const nextQuantities = { ...quantities };
+      delete nextQuantities[item.id];
+      setQuantities(nextQuantities);
+    }
+  };
+
+  const changeQuantity = (id: string, quantity: number) => {
+    if (id && quantity) {
+      const nextQuantities = { ...quantities };
+      nextQuantities[id] = quantity;
+      setQuantities(nextQuantities);
+    }
+  };
+
+  const totalItems = Object.values(quantities).reduce((acc, i) => acc + i, 0);
+
+  const totalPrice = items.reduce(
+    (acc, item) => acc + item.price * quantities[item.id],
     0,
   );
 
-  const totalSalesTax = cart.reduce(
-    (acc, item) => acc + (item.salesTaxRate / 100) * item.quantity,
+  const totalSalesTax = items.reduce(
+    (acc, item) => acc + item.salesTaxRate * item.price * quantities[item.id],
     0,
   );
 
   return (
     <CartContext.Provider
       value={{
-        items: cart,
+        items,
+        changeQuantity,
+        quantities,
         placeInCart,
+        removeFromCart,
         totalItems,
         totalPrice,
         totalSalesTax,

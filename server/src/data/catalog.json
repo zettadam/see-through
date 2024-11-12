@@ -10,7 +10,7 @@
     "averageRating": 8.59,
     "voterCount": 48386,
     "price": 74.95,
-    "salesTaxRate": 8.0
+    "salesTaxRate": 0.08
   },
   {
     "id": "01931c50-f9b2-7f52-8a72-2d129d9fc7d9",
@@ -23,7 +23,7 @@
     "averageRating": 8.52,
     "voterCount": 54313,
     "price": 71.99,
-    "salesTaxRate": 8.0
+    "salesTaxRate": 0.08
   },
   {
     "id": "01931c50-f9b2-76ce-aa1f-7757be83a421",
@@ -36,7 +36,7 @@
     "averageRating": 8.58,
     "voterCount": 63279,
     "price": 291.49,
-    "salesTaxRate": 8.0
+    "salesTaxRate": 0.08
   },
   {
     "id": "01931c50-f9b2-77c6-bbc2-688fc41a47b3",
@@ -49,7 +49,7 @@
     "averageRating": 8.53,
     "voterCount": 46962,
     "price": 51.39,
-    "salesTaxRate": 8.0
+    "salesTaxRate": 0.08
   },
   {
     "id": "01931c50-f9b2-7ed0-9cff-453d96989ca0",
@@ -62,7 +62,7 @@
     "averageRating": 8.59,
     "voterCount": 24698,
     "price": 131.99,
-    "salesTaxRate": 8.0
+    "salesTaxRate": 0.08
   },
   {
     "id": "01931c50-f9b2-745c-a75a-907a075df243",
@@ -75,7 +75,7 @@
     "averageRating": 8.43,
     "voterCount": 48377,
     "price": 53.95,
-    "salesTaxRate": 8.0
+    "salesTaxRate": 0.08
   },
   {
     "id": "01931c50-f9b2-775a-95b5-cf7ade1d5d08",
@@ -88,7 +88,7 @@
     "averageRating": 8.35,
     "voterCount": 101899,
     "price": 79.99,
-    "salesTaxRate": 8.0
+    "salesTaxRate": 0.08
   },
   {
     "id": "01931c50-f9b2-72e7-8cdb-772aeeffcced",
@@ -101,7 +101,7 @@
     "averageRating": 8.55,
     "voterCount": 22125,
     "price": 81.28,
-    "salesTaxRate": 8.0
+    "salesTaxRate": 0.08
   },
   {
     "id": "01931c50-f9b2-7c1d-92e8-e29a50024bf4",
@@ -114,7 +114,7 @@
     "averageRating": 8.42,
     "voterCount": 33272,
     "price": 98.99,
-    "salesTaxRate": 8.0
+    "salesTaxRate": 0.08
   },
   {
     "id": "01931c50-f9b2-75fa-b9a9-59fc9938853f",
@@ -127,7 +127,7 @@
     "averageRating": 8.42,
     "voterCount": 35704,
     "price": 39.97,
-    "salesTaxRate": 8.0
+    "salesTaxRate": 0.08
   },
   {
     "id": "01931c50-f9b2-7f5d-8b2f-4f50151acfab",
@@ -140,6 +140,6 @@
     "averageRating": 8.34,
     "voterCount": 53911,
     "price": 63.0,
-    "salesTaxRate": 8.0
+    "salesTaxRate": 0.08
   }
 ]

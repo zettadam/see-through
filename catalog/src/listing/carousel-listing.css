@@ -51,6 +51,7 @@
           font-size: 1.6rem;
           margin: 0 0 1rem 0;
         }
+        .add2cart,
         form {
           display: flex;
           gap: 1rem;
