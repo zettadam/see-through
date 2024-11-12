@@ -2,6 +2,75 @@
   .st-catalog-listing {
     background: rebeccapurple;
     color: white;
-    padding: 0 1rem;
+    padding: 1rem;
+
+    > h2 {
+      margin: 0 0 2rem 0;
+    }
+
+    > div.header {
+      display: flex;
+      gap: 2rem;
+      margin: 0 0 2rem 0;
+
+      > span:nth-of-type(1) {
+        flex: 0 0 10rem;
+      }
+      > span:nth-of-type(2) {
+        flex: 1;
+      }
+      > span:nth-of-type(3) {
+        flex: 0 0 30%;
+        display: flex;
+
+        span {
+          flex: 33.33%;
+        }
+      }
+    }
+
+    > article {
+      display: flex;
+      gap: 2rem;
+      justify-content: stretch;
+      margin-block: 0 2rem;
+
+      > figure {
+        flex: 0 0 10rem;
+        margin: 0;
+        padding: 0;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      > div {
+        flex: 1;
+        h3 {
+          font-size: 1.6rem;
+          margin: 0 0 1rem 0;
+        }
+        form {
+          display: flex;
+          gap: 1rem;
+        }
+      }
+
+      > ul {
+        display: flex;
+        flex: 0 0 30%;
+        margin: 2rem 0 0 0;
+        padding: 0;
+
+        li {
+          display: block;
+          flex: 33.33%;
+          list-style: none;
+          margin: 0;
+          padding: 0;
+        }
+      }
+    }
   }
 }

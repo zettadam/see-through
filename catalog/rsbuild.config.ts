@@ -12,7 +12,11 @@ export default defineConfig({
         "./CatalogDetails": "./src/details/CatalogDetails.tsx",
         "./CatalogListing": "./src/listing/CatalogListing.tsx",
       },
-      shared: ["react", "react-dom"],
+      remotes: {
+        seethrough_cart:
+          "seethrough_cart@http://localhost:3002/mf-manifest.json",
+      },
+      shared: ["react", "react-dom", "@tanstack/react-query"],
     }),
   ],
   server: {

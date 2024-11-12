@@ -3,9 +3,13 @@
 @layer elements {
   body {
     margin: 2rem 10dvw;
-    color: white;
+    color: black;
     font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-    background: black;
+    background: white;
+  }
+
+  button {
+    cursor: pointer;
   }
 }
 
@@ -26,11 +30,21 @@
 }
 
 @layer overrides {
-  .st-catalog-carousel {
-    background: gray;
+  .st-catalog-carousel,
+  .st-catalog-listing {
+    background: transparent;
+    color: black;
   }
 
   .st-catalog-listing {
-    background: slateblue;
+    article {
+      border-top: 1px solid gray;
+      margin-block: 0;
+      padding-block: 2rem;
+    }
+    img {
+      border: 1px solid black;
+      padding: 0.125rem;
+    }
   }
 }
